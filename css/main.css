@@ -1,0 +1,1022 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+
+/* ********************* 레이아웃 선언 시작  ******************* */
+#navi{ width: 100%; height: 50px; }
+
+#wrap>div{ width: 100%; }
+#about, #work, #features, #banner2, #plan, #project, #news{
+  padding: 105px 0;
+}
+#intro{ height: 819px; }
+#work{ background-color: #f8f8f8; }
+#banner1{ 
+  width: 252px; padding: 84px 0; 
+  background-image: url(../images/lg/banner1-bg.jpg);
+}
+#banner2{
+  background-image: url(../images/lg/banner2-bg.jpg);
+}
+#video{ height: 357px; padding: 84px 0; }
+#banner3{ 
+  height: 252px; padding: 63px 0;
+  background-color: #3483de;
+}
+#banner4{ 
+  height: 294px; padding: 95px 0;  
+  background-color: #f2f2f2;
+}
+#footer{ 
+  height: 84px; padding: 21px 0;
+  background-color: #333;
+}
+
+
+/* ********************* 공통 영역 선언 시작  ******************* */
+html{ font-family: 'Roboto', sans-serif; }
+
+/* jarallax CSS */
+.jarallax {
+    position: relative;
+    z-index: 0;
+}
+.jarallax > .jarallax-img {
+    position: absolute;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+/* bxSlider Reset */
+.bx-wrapper{
+  -webkit-box-shadow: 0 0 0 #fff;
+  box-shadow: 0 0 0 #fff;
+  border: 0;
+}
+
+.bx-wrapper .bx-controls-direction a.bx-next{ 
+  right: -60px; 
+}
+.bx-wrapper .bx-controls-direction a.bx-prev{
+  left: -60px;
+}
+
+
+/* Title Style Settings */
+.title h2{
+  width: 100%; height: 63px; 
+  padding-bottom: 21px;
+  margin-bottom: 63px;
+  text-align: center;
+  font: 700 2.1rem/42px "Nanum Gothic", sans-serif;
+  position: relative;
+}
+.title h2:after{
+  content: ''; display: block; width: 80px; height: 3px;
+  background-color: #3483de;
+  position: absolute; left: 50%; bottom: 0;
+  margin-left: -43px;
+}
+
+
+
+
+
+
+/* Button Style Settings */
+.btn-type{
+  display: inline-block; /*a태그 인라인블럭인지*/
+  width: 210px; height: 63px;
+  border: 1px solid #fff;
+  text-align: center;
+  font: bold 1.5rem/63px "Nanum Gothic",sans-serif;
+  text-decoration: none !important;
+  color: #fff;
+
+  position: relative;
+}
+.btn-type:hover{ color: #2d2d2d !important; }
+
+.btn-type:before{
+  content:''; display: block; width: 0%; height: 100%;
+  position: absolute; left: 0; top: 0;
+  background-color: #fff;
+
+  -webkit-transition: all ease 0.6s;
+  -moz-transition: all ease 0.6s;
+  -o-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+}
+.btn-type:hover:before{ 
+  width: 100%; 
+}
+.btn-type span{ position: relative; }
+.btn-type1{ color: #fff; }
+.btn-type2{ 
+  color: #3483de; border: 1px solid #3483de;
+}
+.btn-type2:hover{ color: #fff !important; }
+.btn-type2:hover:before{ background-color: #3483de; }
+
+
+
+
+
+
+/* ********************* 개별 영역 선언 시작  ******************* */
+
+/* ************** Navi Area Start ************* */
+#navi{
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+
+  -webkit-transition: all ease 0.6s;
+  -moz-transition: all ease 0.6s;
+  -o-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+}
+
+#navi .container a{  
+  color: #fff; font-family: "Nanum Gothic", sans-serif; 
+}
+
+
+/* Site Logo */
+#navi .navbar-header a{ font-size: 2.3rem; }
+
+
+/* Gnb */
+#navi #gnb a{ font-size: 1.5rem; }
+
+
+
+/* Fixed Toggle Class Setting */
+.fixed{
+  background-color: #f8f8f8 !important;
+  border-bottom: 1px solid #e7e7e7 !important;
+}
+.fixed .container a{ color: #2d2d2d !important; }
+
+/* ************** Intro Area Start ************* */
+
+/* Intro Slider Area Start */
+#slider{ width: 100%; height: 819px; }
+#slider .item{ width: 100%; height: 819px; } 
+#slider .item:nth-child(1){ background: url(../images/lg/slider-img5.jpg) 50% 50% no-repeat; background-size: cover; }
+#slider .item:nth-child(2){ background: url(../images/lg/slider-img4.jpg) 50% 50% no-repeat; background-size: cover; }
+#slider .item:nth-child(3){ background: url(../images/lg/slider-img1.jpg) 50% 50% no-repeat; background-size: cover; }
+
+#slider .left, #slider .right{ background: none; }
+#slider .left .glyphicon , #slider .right .glyphicon { display: block;  }
+#slider .left i, #slider .right i{ 
+  position: absolute; top: 50%; font-size: 4.8rem;
+}
+
+
+#slider .caption{
+  width: 1170px; height: 300px; padding: 30px;rgba(255,255,255,0.5);
+  position: absolute; left: 50%; top: 50%;
+  margin-left: -585px; margin-top: -150px;
+  text-align: center; color: #fff;
+  display: block; /* <- 캡션이 필요할 경우 - display:block; */
+}
+#slider .item:nth-child(1) .caption{ 
+  text-align: left; padding-top: 0;
+}
+#slider .item:nth-child(2) .caption{
+  color: #000;
+}
+
+#slider .caption h2{ 
+  font: 400 5.7em 'Lato',sans-serif; 
+  margin-bottom: 42px;
+
+
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -o-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+#slider .item:nth-child(1) .caption h2{
+  font-size: 1.9rem; 
+  margin-bottom: 21px;
+}
+
+
+#slider .caption h2+p{
+  font-family: "Roboto", sans-serif;
+  font-size: 1.9rem;
+
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+#slider .item:nth-child(1) .caption h2+p{
+  font-family: 'Lato', sans-serif;
+  font-size: 5.7rem;
+  width: 65%;
+  line-height: 60px;
+  margin-bottom: 63px;
+}
+
+
+
+#slider .caption h2+p+a{
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+  -o-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+
+
+/* mobile-item-contents */
+#intro .mobile-item-contents{ display: none; }
+
+
+/* ************** About Area Start ************* */
+#about .col-md-4{ text-align: center; padding: 0 15px; }
+
+#about .col-md-4 h2{
+  font-size: 2.1rem;
+  font-family: "Nanum Gothic", sans-serif;
+  margin-bottom: 21px;
+}
+
+#about .icon-box{
+  width: 100px; height: 100px; margin: 0 auto 25px;
+  position: relative;
+}
+#about .icon-box:after{  
+  content:''; display: block;
+  width: 100px; height: 100px;
+  border: 2px solid #3483de;
+  position: absolute; left: 0; top: 0;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+#about .icon-box:hover:after{
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -o-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+#about .icon-box i{
+  position: relative; width: 100px; height: 100px; 
+  background-color: #3483de;
+  font-size: 4rem;
+  line-height: 100px;
+  color: #fff;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+
+/* ************** Work Area Start ************* */
+
+/* Left-box area start */
+#work .left-box:after{ content: ''; display: block; clear: both; }
+#work .left-box>div{ 
+  height: 294px; float: left; 
+  position: relative;
+}
+#work .left-box>div:nth-child(1){ width: 50%; }
+#work .left-box>div:nth-child(2){ width: 50%; }
+#work .left-box>div:nth-child(3){ width: 100%; }
+
+#work .left-box>div img{ width: 100%; height: 100%; } /*얘값주니까 사이즈딱맞아짐*/
+#work .left-box>div .caption-box{
+  width: 100%; height: 294px;
+  position: absolute; left: 0; top: 0;
+  background-color: rgba(7,118,246,0.5);
+  color: #fff; text-align: center;
+  opacity: 0;
+
+  -webkit-transition: all ease 0.6s;
+  -moz-transition: all ease 0.6s;
+  -o-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+}
+#work .left-box>div:hover .caption-box{ opacity: 1; } /*뜨게 만들어줌*/
+#work .left-box>div .caption-box h3{
+  width: 100%; height: 100%;
+  font: 700 2rem/294px "Nanum Gothic", sans-serif;
+}
+
+
+
+
+/* Right-box area start */
+#work .right-box:after{ content: ''; display: block; clear: both; }
+#work .right-box>div{ width: 50%; height: 588px; float: left; }
+#work .right-box>div img{ width: 100%; }
+
+/*first Box*/
+#work .right-box>div:first-child{ position: relative; }
+#work .right-box>div:first-child img{ width: 100%; height: 100%; }
+#work .right-box>div:first-child .caption-box{ 
+  width: 100%; height: 588px;  
+  position: absolute; left: 0; top: 0;
+  background-color: rgba(7,118,246,0.5);
+  color: #fff; text-align: center;
+  opacity: 0;
+
+  -webkit-transition: all ease 0.6s;
+  -moz-transition: all ease 0.6s;
+  -o-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+}
+#work .right-box>div:first-child:hover .caption-box{ opacity: 1; }
+#work .right-box>div:first-child .caption-box h3{
+  width: 100%; height: 100%;
+  font: 700 2rem/588px "Nanum Gothic",sans-serif;
+}
+/*last Box*/
+#work .right-box>div:last-child>div{ 
+  width: 100%; height: 294px;
+  position: relative; 
+}
+#work .right-box>div:last-child>div img{ width: 100%; height: 100%; }
+#work .right-box>div:last-child>div .caption-box{
+  width: 100%; height: 294px;  
+  position: absolute; left: 0; top: 0;
+  background-color: rgba(7,118,246,0.5);
+  color: #fff; text-align: center;
+  opacity: 0;
+
+  -webkit-transition: all ease 0.6s;
+  -moz-transition: all ease 0.6s;
+  -o-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+}
+#work .right-box>div:last-child>div:hover .caption-box{ opacity: 1; }
+#work .right-box>div:last-child>div h3{ 
+  width: 100%; height: 100%;
+  font: 700 2rem/294px "Nanum Gothic",sans-serif;
+}
+
+
+/* ************** Banner1 Area Start ************* */
+#banner1 h2{
+  width: 500px; height: 84px; margin-right: 200px;
+  font: 700 3.4rem/40px "Nanum Gothic",sans-serif;
+  color: #fff; display: inline-block;
+}
+#banner1 h2 span{ display: block; }
+#banner1 .btn-type{ top: -20px; }
+
+/* ************** Features Area Start ************* */
+#features .col-md-4{ 
+  height: 168px; 
+  padding-left: 68px;
+  padding-right: 30px;
+}
+#features .col-md-4 h2{
+  height: 21px;
+  font: 1.9rem/21px Arial,sans-serif;
+  margin-bottom: 21px;
+}
+#features .col-md-4 i{
+  font-size: 4rem; color: #3483de;
+  position: absolute; left: 0; top: 0;
+}
+
+/* ************** Banner2 Area Start ************* */
+#banner2{ position: relative; }
+#banner2:after{
+  content: ''; display: block; width: 100%; height: 100%;
+  position: absolute; left: 0; top: 0; 
+  background-color: rgba(0,0,0,0.2);
+}
+#banner2 .container{ position: relative; z-index: 10; } /*글씨튀어나옴물어볼것*/
+
+/* left-box Area Start */
+#banner2 .left-box{ color: #fff; padding-right: 45px;}
+#banner2 .left-box h2{
+  width: 100%; height: 42px;
+  font: 700 2.5rem/42px "Nanum Gothic",sans-serif;
+  margin-bottom: 21px;
+}
+
+
+/* right-box Area Start */
+#banner2 .right-box{ color: #fff; padding-left: 100px;}
+#banner2 .right-box .won-progress{
+  width: 180px; height: 168px; display: inline-block;
+  text-align: center;
+}
+#banner2 .right-box .won-progress>div{ margin-bottom: 21px; }
+#banner2 .right-box>div:first-child{ margin-right: 100px; }
+#banner2 .right-box .won-progress h3{
+  font: 700 1.9rem "Nanum Gothic",sans-serif;
+}
+#banner2 .right-box .circle{ position: relative; }
+#banner2 .right-box .circle strong{
+  display: inline-block;
+  width: 100px; height: 42px; text-align: center;
+  line-height: 42px;
+  position: absolute; left: 50%; top: 50%;
+  margin-left: -50px; margin-top: -21px;
+}
+
+
+/* ************** Plan Area Start ************* */
+
+
+/* left-box Area Start */
+#plan .left-box .progress-wrap{ width: 100%; }
+#plan .left-box .progress-wrap li{  width: 540px; margin-bottom: 21px; }
+#plan .left-box .progress-wrap h3{
+  font: 700 1.5rem "Nanum Gothic",sans-serif;
+  width: 100%; height: 21px; position: relative;
+  margin-bottom: 5px;
+}
+#plan .left-box .progress-wrap h3 span{
+  width: 50px; height: 17px;
+  position: absolute; right: 5px; top: 3px;
+}
+#plan .left-box .progress-wrap .progress{ 
+  height: 15px; border-radius: 15px;
+}
+
+
+
+/* right-box Area Start */
+#plan .right-box{ padding-left: 30px; }
+#plan .right-box h2{
+  font:700 2.2rem/42px "Nanum Gothic",sans-serif;
+  width: 100%; height: 42px;
+  margin-bottom: 21px;
+  margin-top: -21px;
+}
+#plan .right-box h2+p{
+  margin-bottom: 42px;
+}
+
+
+
+/* ************** Video Area Start ************* */
+#video{ text-align: center; color: #fff; }
+#video h2{
+  width: 100%; height: 42px; margin-bottom: 21px;
+  font: 700 3.7rem "Nanum Gothic",sans-serif;
+}
+#video h2+p{
+  width: 100%; height: 21px; margin-bottom: 42px;
+  font: 400 1.5rem 'Lato',sans-serif;
+}
+
+/* ************** Project Area Start ************* */
+
+
+/* left-box Area Start */
+#project .left-box{ padding-right: 45px; padding-top: 63px;}
+#project .left-box h2{
+  width: 100%; height: 42px; margin-bottom: 21px;
+  font: 700 3.7rem "Nanum Gothic",sans-serif;
+}
+#project .left-box p{
+  width: 100%; height: 21px; margin-bottom: 21px;
+  font: 400 1.5rem 'Lato',sans-serif;
+}
+#project .left-box p+p{ height: 63px; margin-bottom: 42px; }
+
+/* btn-setting */
+#project .left-box a{
+  display: inline-block;
+  width: 150px; height: 50px;
+  font: 500 1.4rem/53px 'Roboto',sans-serif;
+  background-color: #3482de;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+#project .left-box a:hover{ 
+  background-color: #fc0; color: #000;
+}
+
+
+
+/* right-box Area Start */
+#project .right-box{ padding-left: 45px; }
+#project .right-box .img-rounded{ 
+  -webkit-box-shadow: 0 0 15px #ccc;
+  -moz-box-shadow: 0 0 15px #ccc;
+  -o-box-shadow: 0 0 15px #ccc;
+  box-shadow: 0 0 15px #ccc;
+}
+
+/* ************** Banner3 Area Start ************* */         
+#banner-slider1{ 
+ width: 100%; height: 126px;
+}
+#banner-slider1 .caption-onner,
+#banner-slider1 .item{ height: 126px; }
+#banner-slider1 .caption{ 
+ width: 76%; height: 126px;
+ position: absolute; top: 0; left: 50%; margin-left: -38%;
+ padding-left: 180px; padding-top: 21px;
+ color: #fff;
+}
+#banner-slider1 .caption h2{
+  width: 570px; margin-bottom: 21px;
+  font:400 italic 1.9rem/21px 'Lato',sans-serif;
+}
+
+#banner-slider1 .caption .img-circle{
+  width: 127px; height: 126px;
+  position: absolute; left: 0; top: 0;
+}
+
+/* 캐러셀 슬라이드 컨드롤 설정 */
+#banner-slider1 .carousel-control{
+  width: 20px; height: 30px; background-image: none;
+  top: 50%;  margin-top: -15px;
+}
+#banner-slider1 .left.carousel-control{ left: 70px; }
+#banner-slider1 .right.carousel-control{ right: 70px; }
+#banner-slider1 .carousel-indicators{ bottom: -50px; }
+
+
+/* ************** News Area Start ************* */
+#news .col-md-4{ padding-left: 15px; padding-right: 15px; }
+#news .news-list{
+  width: 100%; height: 420px;
+
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+
+  -webkit-box-shadow: 0 0 15px #ccc;
+  -moz-box-shadow: 0 0 15px #ccc;
+  -o-box-shadow: 0 0 15px #ccc;
+  box-shadow: 0 0 15px #ccc;
+}
+
+#news .news-list img{
+  width: 100%; /* 부모따라 */
+  margin-bottom: 21px;
+
+  -webkit-border-radius: 15px 15px 0 0; /* 상왼 상오 하왼 하오 */
+  -moz-border-radius: 15px 15px 0 0;;
+  border-radius: 15px 15px 0 0;
+}
+
+#news .news-list .date{
+  width: 100%; height: 21px;
+  font: 1.4rem/21px 'Roboto',sans-serif;
+  margin-bottom: 21px;
+  padding: 0 30px;
+}
+
+#news .news-list h3{
+  width: 280px; height: 42px;
+  font:700 1.6rem/22px 'Roboto',sans-serif;
+  margin-bottom: 21px;
+  padding: 0 30px;
+}
+
+#news .news-list h3+p{
+  width: 100%; height: 63px;
+  font: 1.4rem/21px 'Roboto',sans-serif;
+  padding: 0 30px;
+  margin-bottom: 15px;
+}
+
+#news .news-list a{ 
+  display: block; width: 100%; height: 21px; 
+  text-align: right; text-decoration: none;
+  color: #3483de;
+  font: bold 1.4rem/21px 'Roboto',sans-serif;
+  padding-right: 30px;
+}
+#news .news-list a:hover{
+  color: #888;
+}
+
+
+
+
+
+
+
+
+/* ************** Banner4 Area Start ************* */
+#banner-slider2{ 
+  width: 100%; height: 150px; 
+  
+}
+#banner-slider2 .bx-wrapper{
+  left: 50%; background-color: transparent;
+
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+
+
+/* ************** Footer Area Start ************* */
+
+#footer{ color: #fff; }
+#footer .pull-left{ 
+  height: 42px; line-height: 55px; padding-left: 15px;
+}
+#footer .pull-left i{ font-size: 3rem; margin-right: 5px; }
+#footer .pull-left i:hover{ color: #fc0; }
+#footer .pull-right{ 
+  height: 42px; line-height: 55px; padding-right: 15px;
+}
+
+
+
+
+
+
+/* *************** Media Query Area Start **************** */
+
+
+
+@media all and (max-width:1199px){
+
+  /* ****** Intro Area Start ****** */
+  #slider .item:first-child .caption{
+    left: 10%; margin-left: 0;
+  }
+
+  /* ********** banner2 Area Start ********** */
+  #banner2 .right-box>div:first-child{ margin-right: 20px; }
+
+
+  /* ********** Intro Area Start ********** */
+  #plan .left-box .progress-wrap li{ width: 100%; }
+
+  
+
+
+}
+
+  #plan .container{ padding: 0 15px; }
+  #plan .left-box .progress-wrap li{ width: 100%; }
+
+
+/* ********** Desktop Area Start ********** */
+@media all and (max-width: 1024px){
+
+  /* ****** Navi Area Start ****** */
+  #navi .container{ padding: 0 15px; }
+
+
+  /* ****** Intro Area Start ****** */
+  #slider .item:first-child .caption{
+    left: 10%; margin-left: 0;
+  }
+
+  /* ****** Work Area Start ****** */
+  #work .left-box>div{ height: 240px; }
+  #work .right-box>div{ height: 480px; }
+  #work .right-box>div:last-child>div{ height: 240px; }
+  #work .caption-box{ height: 100% !important; }
+  #work .caption-box h3{ line-height: 240px !important; }
+  #work .right-box>div:first-child h3{ line-height: 480px !important; }
+
+  /* ****** Banner1 Area Start ****** */
+  #banner1 .container{ padding: 0 15px 0 50px; }
+  #banner1 h2{ margin-bottom: 50px; }
+
+  /* ****** Features Area Start ****** */
+  #features .container{ padding: 0 15px; }
+  #features .container .col-md-4{ height: 189px; }
+
+  /* ****** Banner2 Area Start ****** */
+  #banner2 .container{ padding: 0 15px; }
+  #banner2 .right-box{ padding-left: 60px; }  
+  #banner2 .right-box>div:first-child{ margin: 0; }
+
+  /* ****** Plan Area Start ****** */
+  #plan .container{ padding: 0 15px; }
+  #plan .left-box .progress-wrap li{ width: 100%; }
+
+  /* ****** Video Area Start ****** */
+  #video .video-title{ top: 43%; }
+
+
+  /* ****** Project Area Start ****** */
+  #project .container{ padding: 0 15px; }
+
+  #project .left-box{ padding:42px 0 0; }
+  #project .left-box h2{ font-size: 3.4rem; }
+  /*#project .left-box p+p{ height: 84px; }*/
+  #project .right-box img{
+    max-width: 100%; height: auto; text-align: center;
+  }
+
+
+  /* ****** Banner3 Area Start ****** */
+  #banner3 #banner-slider1 .caption h2{ width: 485px; }
+
+
+}
+/* ********** Tablet And Desktop Area Start ********** */
+ /* 중간 영역 처리 구문 :
+ @media all and (min-width: 992px) and (max-width: 768px){
+    실행할 처리 내용
+  }  
+*/
+@media all and (max-width: 991px){
+  
+  /* ****** Intro Area Start ****** */
+  #intro{ height: 588px; }
+  #intro #slider{ display: none; }
+  #intro .mobile-item-contents{ 
+    display: block; width: 100%; height: 100%;
+    background: url(../images/md/slider-img1.jpg) top center no-repeat;
+    position: relative;
+  }
+
+  #intro  .mobile-item-contents .caption{
+    width: 60%; height: 272px;
+    position: absolute; left: 120px; top: 50%;
+    margin-top: -136px;
+    color: #fff;
+  }
+  #intro .mobile-item-contents .caption h2{
+    font: 400 italic 1.2em 'Lato',sans-serif; 
+    margin-bottom: 21px;
+
+
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+  }
+
+  #intro .mobile-item-contents .caption h2+p{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 4.2rem;
+    line-height: 40px;
+    width: 75%;
+    margin-bottom: 63px;
+
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+  #intro .mobile-item-contents .caption h2+p+a{
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+
+  /* ****** About Area Start ****** */
+  #about .col-md-4{ margin-bottom: 42px; }
+
+  /* ****** Banner1 Area Start ****** */
+  #banner1 .container{ height: 168px; }
+  #banner1 h2{ width: 100%; text-align: center; margin: 0 0 21px; }
+  #banner1 a.btn-type{ top: 0; margin: auto; display: block; }
+
+
+  /* ****** Features Area Start ****** */
+  #features .container .col-md-4{ height: 126px; }
+
+  /* ****** Banner2 Area Start ****** */
+  #banner2 .left-box{ margin-bottom: 84px; }
+  #banner2 .right-box{ padding-left: 0; text-align: center; }
+  #banner2 .right-box>div:first-child, #banner2 .right-box>div:last-child{ 
+    margin: 0 50px; }
+  
+  /* ****** Plan Area Start ****** */
+  #plan .left-box{ margin-bottom: 84px; }
+  #plan .right-box{ padding: 0; }
+
+  /* ****** Project Area Start ****** */
+  #project .row>div{ text-align: center; }
+  #project .row .left-box{ margin-bottom: 42px; }
+  #project .row .right-box{ padding-left: 0; }
+
+
+  /* ****** Banner3 Area Start ****** */
+  #banner3{ height: 378px; }
+  #banner-slider1, #banner-slider1 .carousel-inner, #banner-slider1 .item{
+    height: 252px;
+  }
+  #banner3 #banner-slider1 .caption{
+    width: 450px; height: 100%;
+    margin-left: -225px; padding: 147px 0 0;
+    text-align: center;
+  }
+  #banner3 #banner-slider1 .caption h2{
+    width: 100%; font-size: 1.7rem;
+  }
+
+  #banner-slider1 .caption .img-circle{
+    left: 50%; margin-left: -63px;
+  }
+
+  /* ****** News Area Start ****** */
+  #news .col-md-4{ margin-bottom: 63px; }
+  #news .news-list{ width: 595px; height: 487px; margin: auto; }
+  #news .news-list h3{ width: 100%; height: 21px; }
+  #news .news-list h3+p{ width: 100%; height: 42px; }
+  #news .news-list li{ text-indent: 10px; }
+  #news .news-list a{ padding-right: 40px; }
+
+}
+
+
+/* ********** Tablet Area Start ********** */
+@media all and (max-width: 767px){
+
+
+  /* ********** Navi Area Start ********** */
+  #navi{ background-color: #fff; }
+  #navi .container a{ color: #2d2d2d; }
+  #navi #gnb{ background-color: #fff; }
+  #navi #gnb a:hover{ color: #c00; }
+
+
+  /* ********** Intro Area Start ********** */
+  #intro .mobile-item-contents{
+    height: 546px;
+    background-image: url(../images/sm/intro-bg.jpg);
+  }
+
+  #intro .mobile-item-contents .caption{
+    left: 48px;
+  }
+
+   #intro a.btn-type{ width: 155px; height: 52px; line-height: 52px;}
+
+  /* ********** About Area Start ********** */
+  #about .col-md-4{ padding: 0 110px; }
+  #about .col-md-4 h2{ margin-bottom: 21px; }
+
+
+  /* ********** Work Area Start ********** */
+  #work .left-box>div{ height: 294px; }
+  #work .right-box>div{ height: 588px; }
+  #work .right-box>div:last-child>div{ height: 294px; }
+
+
+
+  /* ********** Banner1 Area Start ********** */
+  #banner1 .container{ height: 126px; }
+  #banner1 h2{ font-size: 2.5rem; height: 42px; }
+  #banner1 h2 span{ display: inline; }
+  #banner1 a.btn-type{ width: 155px; height: 52px; line-height: 52px;}
+
+
+
+  /* ********** features Area Start ********** */
+  #features .container{ padding: 0 30px; }
+  #features .container .col-md-4{ padding-right: 0; height: 137px; }
+
+
+  /* ********** banner2 Area Start ********** */
+  #banner2 .container{ padding: 0 65px; }
+  #banner2 .container .left-box{ padding-right: 0; }
+  #banner2 .container .right-box{ padding-left: 0; text-align: center; }
+
+  /* ********** paln Area Start ********** */
+  #plan .container{ padding: 0 65px; }
+  #plan .container .right-box{ padding-left: 0; }
+  #plan a.btn-type{
+    width: 155px; height: 52px; line-height: 52px;
+  }
+
+  
+  /* ********** Video Area Start ********** */
+  #video h2{ font-size: 2.8rem; }
+  #video a.btn-type{ width: 155px; height: 52px; line-height: 52px;}
+
+
+  /* ********** News Area Start ********** */
+  #news .news-list{ height: 462px; }
+
+
+  /* ********** Banner4 Area Start ********** */
+  #banner4 #banner-slider2{ width: 420px; margin: auto; }
+  #banner4 #banner-slider2 li{ width: 210px !important; }
+
+  /* ********** Footer Area Start ********** */
+  #footer{ height: 168px; padding: 42px 0;}
+  #footer .sns-group, #footer .copy{
+    float: none; width: 100%; text-align: center;
+  }
+  #footer .sns-group{ height: 42px; }
+  #footer .copy{ height: 21px; }
+
+}
+
+
+
+
+
+/* 수정 */
+/* ********** Mobile Meddle Area Start ********** */
+@media all and (max-width: 600px){
+  #news .news-list{ width: 100%; }
+}
+
+
+
+
+/* ********** Mobile Area Start ********** */
+@media all and (max-width: 479px){
+  #intro .mobile-item-contents{
+    background-image: url(../images/sm/intro-bg.jpg);
+  }
+
+  /* ********** Intro Area Start ********** */
+  #intro{ height: 546px; }
+  #intro .mobile-item-contents .caption h2+p{
+    font-size: 3.6rem;
+  }
+
+  /* ********** About Area Start ********** */
+  #about .col-md-4{ padding: 0 40px; }
+
+
+  /* ********** Work Area Start ********** */
+  #work .left-box>div,
+  #work .container .row .right-box>div{ float: none; }
+  #work .caption-box h3{ line-height: 357px !important; }
+  #work .right-box>div:first-child h3{line-height: 651px !important;}
+
+  #work .container .row .left-box>div{ 
+    width: 100%; height: 357px; 
+  }
+
+  #work .container .row .right-box>div:first-child{ 
+    width: 100%; height: 651px; 
+  }
+  #work .container .row .right-box>div:last-child{ width: 100%;  }
+  #work .container .row .right-box>div:last-child>div{ 
+    width: 100%; height: 357px; 
+  }
+
+  #work .right-box>div{ height: auto; }
+
+
+  /* ********** banner1 Area Start ********** */
+  #banner1{ padding: 63px 0; }
+  #banner1 .container{ height: 167px; }
+  #banner1 .container h2{ height: 84px; }
+
+
+  /* ********** video Area Start ********** */
+  #video .container{ padding: 0 30px; }
+  #video .container h2{ 
+    width: 250px; height: 63px; line-height: 32px; margin: 0 auto 21px;
+  }
+
+
+  /* ********** project Area Start ********** */
+  #project .left-box h2{ font-size: 3rem; }
+  #project .row .left-box{ margin-bottom: 105px; }
+
+  /* ********** banner3 Area Start ********** */
+  #banner3 #banner-slider1 .caption{ width: 100%; padding: 147px 80px 0; }
+
+  /* ********** news Area Start ********** */
+  #news .news-list{ width: 100%; height: 460px; }
+  #news .news-list h3{ height: 42px; }
+
+
+  /* ********** Banner4 Area Start ********** */
+  #banner4 #banner-slider2{ width: 210px; margin: auto; }
+  #banner4 #banner-slider2 li{ width: 210px !important; }
+ 
+
+
+}
